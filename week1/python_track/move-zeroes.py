@@ -4,9 +4,9 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         l=0
-        f=0
+        fi=0
         while l<len(nums):
             if nums[l]!=0:
-                nums[l],nums[f]=nums[f],nums[l]
-                f+=1
+                nums[l],nums[fi]=nums[fi],nums[l]
+                fi+=1
             l+=1
