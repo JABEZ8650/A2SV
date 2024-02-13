@@ -1,17 +1,17 @@
 class MyHashSet:
 
     def __init__(self):
-        self.dict={}
+        self.dic=[False]*1000001
 
 
     def add(self, key: int) -> None:
-        self.dict[key]=1
+        self.dic[key]=True
 
     def remove(self, key: int) -> None:
-        self.dict[key]=0
+        self.dic[key]=False
 
     def contains(self, key: int) -> bool:
-        return self.dict.get(key,0)!=0
+        return self.dic[key]
 
 
 # Your MyHashSet object will be instantiated and called as such:
