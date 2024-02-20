@@ -3,5 +3,11 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        for i in range(len(s)//2):
-            s[i], s[len(s)-i-1]= s[len(s)-i-1],s[i]
+        def reverse(s, start, end):
+            if start>=end:
+                return
+            s[start],s[end]=s[end],s[start]
+
+            reverse(s, start+1, end-1)
+
+        return reverse(s, 0, len(s)-1)
